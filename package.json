@@ -1,0 +1,74 @@
+{
+  "name": "@mustapha-ghlissi/react-native-otp",
+  "version": "1.0.7",
+  "description": "React Native One Time Password Customizable Component",
+  "type": "module",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "typings": "lib/typescript/index.d.ts",
+  "react-native": "src/index.ts",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "typescript": "tsc --skipLibCheck --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\" --fix",
+    "check": "yarn typescript && yarn lint",
+    "build": "rm -rf lib && bob build && yarn copy-dts && yarn delete-dts && npm pack",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
+    "delete-dts": "find ./lib/commonjs -name '*.d.js*' -delete && find ./lib/module -name '*.d.js*' -delete"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustapha-ghlissi/react-native-otp.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react-native-otp",
+    "otp",
+    "one",
+    "time",
+    "password",
+    "mobile",
+    "ios",
+    "android",
+    "sms",
+    "web",
+    "verify"
+  ],
+  "author": {
+    "name": "Mustapha GHLISSI",
+    "email": "ghlissi.mustapha@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mustapha-ghlissi/react-native-otp/issues"
+  },
+  "homepage": "https://github.com/mustapha-ghlissi/react-native-otp#readme",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "eslint": "^9.6.0",
+    "prettier": "^3.3.2",
+    "react": "^18.3.1",
+    "react-native": "^0.74.3",
+    "react-native-builder-bob": "^0.25.0",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  }
+}

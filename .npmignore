@@ -1,0 +1,9 @@
+*.log
+node_modules
+.DS_Store
+.eslintrc
+.prettierrc
+.release-it
+yarn.lock
+demo
+example
