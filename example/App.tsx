@@ -7,19 +7,18 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-
-import Otp from 'react-native-otpc';
+import OTP from '@mustapha-ghlissi/react-native-otp';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.label}>Basic OTP</Text>
-        <Otp onConfirm={(code: number) => console.log(code)} />
+        <OTP onConfirm={(code: number) => console.log(code)} />
       </View>
       <View style={styles.content}>
         <Text style={styles.label}>Advanced OTP</Text>
-        <Otp onConfirm={(code: number) => console.log(code)} length={6} />
+        <OTP onConfirm={(code: number) => console.log(code)} length={6} />
       </View>
     </SafeAreaView>
   );
