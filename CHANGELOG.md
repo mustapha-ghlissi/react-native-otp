@@ -1,5 +1,7 @@
 
 
+## [1.1.2](https://github.com/mustapha-ghlissi/react-native-otp/compare/v1.1.1...v1.1.2) (2024-07-18)
+
 ## 1.1.1 (2024-07-18)
 
 
