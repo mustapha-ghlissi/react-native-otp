@@ -18,7 +18,15 @@ function App(): React.JSX.Element {
       </View>
       <View style={styles.content}>
         <Text style={styles.label}>Advanced OTP</Text>
-        <OTP onConfirm={(code: number) => console.log(code)} length={6} />
+        <OTP
+          onConfirm={(code: number) => console.log(code)}
+          length={6}
+          inputStyle={{
+            height: 48,
+            width: 48,
+            borderRadius: 48,
+          }}
+        />
       </View>
     </SafeAreaView>
   );
