@@ -1,5 +1,12 @@
 
 
+## 1.1.1 (2024-07-18)
+
+
+### Bug Fixes
+
+* fix input style prop typing ([88a7d95](https://github.com/mustapha-ghlissi/react-native-otp/commit/88a7d9552460078d8a3aebc9f8727e2f29d30296))
+
 # 1.1.0 (2024-07-18)
 
 
