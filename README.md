@@ -12,8 +12,15 @@
 [![github](https://img.shields.io/github/contributors/mustapha-ghlissi/react-native-otp)](https://www.npmjs.com/package/@mustapha-ghlissi/react-native-otp)
 [![github](https://img.shields.io/github/release-date/mustapha-ghlissi/react-native-otp)](https://www.npmjs.com/package/@mustapha-ghlissi/react-native-otp)
 
+## Screenshots
+![Screen 1](./screenshots/screen-1.jpg)
+![Screen 2](./screenshots/screen-2.jpg)
+![Screen 3](./screenshots/screen-3.jpg)
+![Screen 3](./screenshots/screen-4.jpg)
+![Screen 3](./screenshots/screen-5.jpg)
+
 ## Demo
-![App Screenshot](./demo/demo.gif)
+![Demo](./demo/demo.gif)
 
 ## Installation
 Use `npm` or `yarn` to install the package.
