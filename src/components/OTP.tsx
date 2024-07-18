@@ -1,12 +1,14 @@
-import {Keyboard, View, TextInput} from 'react-native';
-import React, {useRef, useState} from 'react';
-import {OTPProps} from './OTP.types';
+import { Keyboard, View, TextInput } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { OTPProps } from './OTP.types';
 import styles from './style';
 
 const OTP: React.FC<OTPProps> = ({
   length = 4,
   inputStyle,
-  fillBorderColor = '#32A071',
+  filledColor = '#A8A8A8',
+  filledOtpColor = '#32A071',
+  outlineColor = '#A8A8A8',
   enabledFillShadow = true,
   cursorColor,
   selectionColor,
@@ -14,9 +16,12 @@ const OTP: React.FC<OTPProps> = ({
 }: OTPProps) => {
   const [otp, setOtp] = useState<Array<number>>([]);
   const [filledOtp, setFilledOtp] = useState(false);
+  const [focusedOtpFieldIndex, setFocusedOtpFieldIndex] = useState<
+    null | number
+  >(null);
   let refs = useRef<any>([]);
   const shadowStyle = enabledFillShadow && {
-    shadowColor: fillBorderColor,
+    shadowColor: filledOtpColor,
     shadowOffset: {
       width: 0,
       height: 6,
@@ -33,6 +38,7 @@ const OTP: React.FC<OTPProps> = ({
 
     if (index < length - 1) {
       refs.current[index + 1]?.focus();
+      setFocusedOtpFieldIndex(index + 1);
 
       return false;
     }
@@ -59,15 +65,20 @@ const OTP: React.FC<OTPProps> = ({
 
     if (index > 0) {
       refs.current[index - 1]?.focus();
+      setFocusedOtpFieldIndex(index - 1);
     }
   };
 
-  const getBorderStyle = (index: number) => ({
+  const getBorderColor = (index: number) => ({
     borderColor: filledOtp
-      ? fillBorderColor
+      ? filledOtpColor
       : otp[index]
-      ? '#A8A8A8'
-      : '#EBEAEC',
+        ? filledColor
+        : focusedOtpFieldIndex === index
+          ? outlineColor
+          : inputStyle && inputStyle.borderColor
+            ? inputStyle.borderColor
+            : '#EBEAEC',
   });
 
   return (
@@ -78,9 +89,10 @@ const OTP: React.FC<OTPProps> = ({
           ref={(ref: never) => (refs.current[index] = ref)}
           style={[
             styles.otpField,
+
             inputStyle,
             shadowStyle,
-            getBorderStyle(index),
+            getBorderColor(index),
           ]}
           maxLength={1}
           autoFocus={index === 0}
@@ -90,7 +102,7 @@ const OTP: React.FC<OTPProps> = ({
           clearTextOnFocus
           cursorColor={cursorColor}
           selectionColor={selectionColor}
-          onKeyPress={({nativeEvent}) => {
+          onKeyPress={({ nativeEvent }) => {
             if (nativeEvent.key === 'Backspace') {
               onRemoveDigit(index);
               return false;

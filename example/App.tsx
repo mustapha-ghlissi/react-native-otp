@@ -21,13 +21,7 @@ function App(): React.JSX.Element {
         <OTP
           onConfirm={(code: number) => console.log(code)}
           length={5}
-          inputStyle={{
-            fontSize: 23,
-            fontWeight: 'bold',
-            height: 48,
-            width: 48,
-            borderRadius: 48,
-          }}
+          inputStyle={styles.input}
         />
       </View>
     </SafeAreaView>
@@ -37,15 +31,24 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    gap: 20,
+    gap: 60,
   },
   content: {
-    gap: 5,
+    gap: 10,
   },
   label: {
     fontWeight: 'bold',
+  },
+  input: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    height: 48,
+    width: 48,
+    borderRadius: 48,
+    borderWidth: 3,
   },
 });
 

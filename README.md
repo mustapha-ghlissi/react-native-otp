@@ -42,10 +42,12 @@ yarn add @mustapha-ghlissi/react-native-otp
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | length | `number`: optional | Number of OTP digits (default = `4`) |
-| fillBorderColor | `string`: optional | Border color when the OTP is fully filled and it's used as the shadow color  is `enabledFillShadow` is set to `true` |
+| filledOtpColor | `string`: optional | Border color when the OTP is fully filled and it's used as the shadow color  if `enabledFillShadow` is set to `true` |
 | enabledFillShadow | `boolean`: optional | Show success shadow when the OTP is fully filled |
 | cursorColor | `string`: optional | InputText cursor color |
 | selectionColor | `string`: optional | InputText content selection color |
+| filledColor | `string`: optional | InputText border color when it's filled |
+| outlineColor | `string`: optional | InputText border color when it's focused |
 | inputStyle | [TextStyle](https://reactnative.dev/docs/text-style-props), [ViewStyle Props](https://reactnative.dev/docs/view-style-props): optional | InputText custom style |
 | onConfirm | `callback`: required | When the OTP is filled, then you can do whatever you need with the entered code. |
 

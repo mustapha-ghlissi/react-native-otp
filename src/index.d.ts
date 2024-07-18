@@ -1,14 +1,16 @@
 declare module '@mustapha-ghlissi/react-native-otp' {
   import React from 'react';
-  import { TextStyle, StyleProp, ViewStyle } from 'react-native';
+  import { TextStyle, ViewStyle } from 'react-native';
 
   export type OTPProps = {
     length?: number;
-    fillBorderColor?: string;
+    filledOtpColor?: string;
     enabledFillShadow?: boolean;
     cursorColor?: string;
     selectionColor?: string;
-    inputStyle?: TextStyle | StyleProp<ViewStyle>;
+    filledColor?: string;
+    outlineColor?: string;
+    inputStyle?: TextStyle | ViewStyle;
     onConfirm: (code: number) => void;
   };
 
