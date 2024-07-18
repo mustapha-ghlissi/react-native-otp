@@ -20,8 +20,10 @@ function App(): React.JSX.Element {
         <Text style={styles.label}>Advanced OTP</Text>
         <OTP
           onConfirm={(code: number) => console.log(code)}
-          length={6}
+          length={5}
           inputStyle={{
+            fontSize: 23,
+            fontWeight: 'bold',
             height: 48,
             width: 48,
             borderRadius: 48,
@@ -35,7 +37,6 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
     gap: 20,
