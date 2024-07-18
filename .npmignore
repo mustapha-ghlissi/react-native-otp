@@ -5,5 +5,7 @@ node_modules
 .prettierrc
 .release-it
 yarn.lock
+screenshots
+donate
 demo
 example
