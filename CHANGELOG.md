@@ -1,5 +1,12 @@
 
 
+# 1.2.0 (2024-07-18)
+
+
+### Features
+
+* update lib ([9720eba](https://github.com/mustapha-ghlissi/react-native-otp/commit/9720eba13421263034d2567865ddfc0c7c4ba3c3))
+
 ## [1.1.2](https://github.com/mustapha-ghlissi/react-native-otp/compare/v1.1.1...v1.1.2) (2024-07-18)
 
 ## 1.1.1 (2024-07-18)
