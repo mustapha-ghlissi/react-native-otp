@@ -5,7 +5,6 @@ declare const styles: {
         alignItems: "center";
         justifyContent: "center";
         gap: number;
-        marginTop: number;
     };
     otpField: {
         width: number;

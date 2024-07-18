@@ -1,5 +1,12 @@
 
 
+# 1.3.0 (2024-07-18)
+
+
+### Features
+
+* add outline color, replace fillColor by filledOtpColor, add filledColor props ([1a76a4f](https://github.com/mustapha-ghlissi/react-native-otp/commit/1a76a4f12c5a89c6ef83dce3fb84af486332b8c3))
+
 # 1.2.0 (2024-07-18)
 
 
